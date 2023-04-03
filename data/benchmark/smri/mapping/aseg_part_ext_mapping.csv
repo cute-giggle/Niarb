@@ -1,0 +1,8 @@
+indicator_name,header_name,is_enabled,units,description
+NVoxels,Vox,enable,None,number of voxels
+Volume_mm3,Vol,enable,mm^3,volume
+normMean,Mean,disable,MR,intensity normMean
+normStdDev,Std,disable,MR,intensity normStdDev
+normMin,Min,disable,MR,intensity normMin
+normMax,Max,disable,MR,intensity normMax
+normRange,Range,disable,MR,intensity normRange

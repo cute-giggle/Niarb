@@ -1,0 +1,21 @@
+indicator_name,header_name,is_enabled,units
+Brain Segmentation Volume,FS_BrainSeg_Vol,enable,mm^3
+Brain Segmentation Volume Without Ventricles,FS_BrainSeg_Vol_No_Vent,enable,mm^3
+Volume of ventricles and choroid plexus,None,disable,mm^3
+Left hemisphere cortical gray matter volume,FS_LCort_GM_Vol,enable,mm^3
+Right hemisphere cortical gray matter volume,FS_RCort_GM_Vol,enable,mm^3
+Total cortical gray matter volume,FS_TotCort_GM_Vol,enable,mm^3
+Left hemisphere cerebral white matter volume,FS_L_WM_Vol,enable,mm^3
+Right hemisphere cerebral white matter volume,FS_R_WM_Vol,enable,mm^3
+Total cerebral white matter volume,FS_Tot_WM_Vol,enable,mm^3
+Subcortical gray matter volume,FS_SubCort_GM_Vol,enable,mm^3
+Total gray matter volume,FS_Total_GM_Vol,enable,mm^3
+Supratentorial volume,FS_SupraTentorial_Vol,enable,mm^3
+SupraTentorialVolNotVent,FS_SupraTentorial_Vol_No_Vent,enable,mm^3
+Mask Volume,FS_Mask_Vol,enable,mm^3
+Ratio of BrainSegVol to eTIV,FS_BrainSegVol_eTIV_Ratio,enable,None
+Ratio of MaskVol to eTIV,FS_MaskVol_eTIV_Ratio,enable,None
+Number of defect holes in lh surfaces prior to fixing,FS_LH_Defect_Holes,enable,None
+Number of defect holes in rh surfaces prior to fixing,FS_RH_Defect_Holes,enable,None
+Total number of defect holes in surfaces prior to fixing,FS_Total_Defect_Holes,enable,None
+Estimated Total Intracranial Volume,None,disable,mm^3

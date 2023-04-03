@@ -1,0 +1,515 @@
+indicator_name,header_name,units
+Brain Segmentation Volume,FS_BrainSeg_Vol,mm^3
+Brain Segmentation Volume Without Ventricles,FS_BrainSeg_Vol_No_Vent,mm^3
+Left hemisphere cortical gray matter volume,FS_LCort_GM_Vol,mm^3
+Right hemisphere cortical gray matter volume,FS_RCort_GM_Vol,mm^3
+Total cortical gray matter volume,FS_TotCort_GM_Vol,mm^3
+Left hemisphere cerebral white matter volume,FS_L_WM_Vol,mm^3
+Right hemisphere cerebral white matter volume,FS_R_WM_Vol,mm^3
+Total cerebral white matter volume,FS_Tot_WM_Vol,mm^3
+Subcortical gray matter volume,FS_SubCort_GM_Vol,mm^3
+Total gray matter volume,FS_Total_GM_Vol,mm^3
+Supratentorial volume,FS_SupraTentorial_Vol,mm^3
+SupraTentorialVolNotVent,FS_SupraTentorial_Vol_No_Vent,mm^3
+Mask Volume,FS_Mask_Vol,mm^3
+Ratio of BrainSegVol to eTIV,FS_BrainSegVol_eTIV_Ratio,None
+Ratio of MaskVol to eTIV,FS_MaskVol_eTIV_Ratio,None
+Number of defect holes in lh surfaces prior to fixing,FS_LH_Defect_Holes,None
+Number of defect holes in rh surfaces prior to fixing,FS_RH_Defect_Holes,None
+Total number of defect holes in surfaces prior to fixing,FS_Total_Defect_Holes,None
+Left-Lateral-Ventricle number of voxels,FS_L_LatVent_Vox,None
+Left-Lateral-Ventricle volume,FS_L_LatVent_Vol,mm^3
+Left-Inf-Lat-Vent number of voxels,FS_L_InfLatVent_Vox,None
+Left-Inf-Lat-Vent volume,FS_L_InfLatVent_Vol,mm^3
+Left-Cerebellum-White-Matter number of voxels,FS_L_Cerebellum_WM_Vox,None
+Left-Cerebellum-White-Matter volume,FS_L_Cerebellum_WM_Vol,mm^3
+Left-Cerebellum-Cortex number of voxels,FS_L_Cerebellum_Cort_Vox,None
+Left-Cerebellum-Cortex volume,FS_L_Cerebellum_Cort_Vol,mm^3
+Left-Thalamus number of voxels,FS_L_ThalamusProper_Vox,None
+Left-Thalamus volume,FS_L_ThalamusProper_Vol,mm^3
+Left-Caudate number of voxels,FS_L_Caudate_Vox,None
+Left-Caudate volume,FS_L_Caudate_Vol,mm^3
+Left-Putamen number of voxels,FS_L_Putamen_Vox,None
+Left-Putamen volume,FS_L_Putamen_Vol,mm^3
+indicator_name number of voxels,header_name_Vox,None
+indicator_name volume,header_name_Vol,mm^3
+Left-Pallidum number of voxels,FS_L_Pallidum_Vox,None
+Left-Pallidum volume,FS_L_Pallidum_Vol,mm^3
+3rd-Ventricle number of voxels,FS_3rdVent_Vox,None
+3rd-Ventricle volume,FS_3rdVent_Vol,mm^3
+4th-Ventricle number of voxels,FS_4thVent_Vox,None
+4th-Ventricle volume,FS_4thVent_Vol,mm^3
+Brain-Stem number of voxels,FS_BrainStem_Vox,None
+Brain-Stem volume,FS_BrainStem_Vol,mm^3
+Left-Hippocampus number of voxels,FS_L_Hippo_Vox,None
+Left-Hippocampus volume,FS_L_Hippo_Vol,mm^3
+Left-Amygdala number of voxels,FS_L_Amygdala_Vox,None
+Left-Amygdala volume,FS_L_Amygdala_Vol,mm^3
+CSF number of voxels,FS_CSF_Vox,None
+CSF volume,FS_CSF_Vol,mm^3
+Left-Accumbens-area number of voxels,FS_L_AccumbensArea_Vox,None
+Left-Accumbens-area volume,FS_L_AccumbensArea_Vol,mm^3
+Left-VentralDC number of voxels,FS_L_VentDC_Vox,None
+Left-VentralDC volume,FS_L_VentDC_Vol,mm^3
+Left-vessel number of voxels,FS_L_Vessel_Vox,None
+Left-vessel volume,FS_L_Vessel_Vol,mm^3
+Left-choroid-plexus number of voxels,FS_L_ChoroidPlexus_Vox,None
+Left-choroid-plexus volume,FS_L_ChoroidPlexus_Vol,mm^3
+Right-Lateral-Ventricle number of voxels,FS_R_LatVent_Vox,None
+Right-Lateral-Ventricle volume,FS_R_LatVent_Vol,mm^3
+Right-Inf-Lat-Vent number of voxels,FS_R_InfLatVent_Vox,None
+Right-Inf-Lat-Vent volume,FS_R_InfLatVent_Vol,mm^3
+Right-Cerebellum-White-Matter number of voxels,FS_R_Cerebellum_WM_Vox,None
+Right-Cerebellum-White-Matter volume,FS_R_Cerebellum_WM_Vol,mm^3
+Right-Thalamus number of voxels,FS_R_ThalamusProper_Vox,None
+Right-Thalamus volume,FS_R_ThalamusProper_Vol,mm^3
+Right-Caudate number of voxels,FS_R_Caudate_Vox,None
+Right-Caudate volume,FS_R_Caudate_Vol,mm^3
+Right-Putamen number of voxels,FS_R_Putamen_Vox,None
+Right-Putamen volume,FS_R_Putamen_Vol,mm^3
+Right-Pallidum number of voxels,FS_R_Pallidum_Vox,None
+Right-Pallidum volume,FS_R_Pallidum_Vol,mm^3
+Right-Hippocampus number of voxels,FS_R_Hippo_Vox,None
+Right-Hippocampus volume,FS_R_Hippo_Vol,mm^3
+Right-Amygdala number of voxels,FS_R_Amygdala_Vox,None
+Right-Amygdala volume,FS_R_Amygdala_Vol,mm^3
+Right-Accumbens-area number of voxels,FS_R_AccumbensArea_Vox,None
+Right-Accumbens-area volume,FS_R_AccumbensArea_Vol,mm^3
+Right-VentralDC number of voxels,FS_R_VentDC_Vox,None
+Right-VentralDC volume,FS_R_VentDC_Vol,mm^3
+Right-vessel number of voxels,FS_R_Vessel_Vox,None
+Right-vessel volume,FS_R_Vessel_Vol,mm^3
+Right-choroid-plexus number of voxels,FS_R_ChoroidPlexus_Vox,None
+Right-choroid-plexus volume,FS_R_ChoroidPlexus_Vol,mm^3
+5th-Ventricle number of voxels,FS_5thVent_Vox,None
+5th-Ventricle volume,FS_5thVent_Vol,mm^3
+WM-hypointensities number of voxels,FS_WM_Hypointens_Vox,None
+WM-hypointensities volume,FS_WM_Hypointens_Vol,mm^3
+Left-WM-hypointensities number of voxels,FS_L_WM_Hypointens_Vox,None
+Left-WM-hypointensities volume,FS_L_WM_Hypointens_Vol,mm^3
+Right-WM-hypointensities number of voxels,FS_R_WM_Hypointens_Vox,None
+Right-WM-hypointensities volume,FS_R_WM_Hypointens_Vol,mm^3
+Left-non-WM-hypointensities number of voxels,FS_L_Non-WM_Hypointens_Vox,None
+Left-non-WM-hypointensities volume,FS_L_Non-WM_Hypointens_Vol,mm^3
+Right-non-WM-hypointensities number of voxels,FS_R_Non-WM_Hypointens_Vox,None
+Right-non-WM-hypointensities volume,FS_R_Non-WM_Hypointens_Vol,mm^3
+Optic-Chiasm number of voxels,FS_OpticChiasm_Vox,None
+Optic-Chiasm volume,FS_OpticChiasm_Vol,mm^3
+CC_Posterior number of voxels,FS_CC_Posterior_Vox,None
+CC_Posterior volume,FS_CC_Posterior_Vol,mm^3
+CC_Mid_Posterior number of voxels,FS_CC_MidPosterior_Vox,None
+CC_Mid_Posterior volume,FS_CC_MidPosterior_Vol,mm^3
+CC_Central number of voxels,FS_CC_Central_Vox,None
+CC_Central volume,FS_CC_Central_Vol,mm^3
+CC_Mid_Anterior number of voxels,FS_CC_MidPosterior_Vox,None
+CC_Mid_Anterior volume,FS_CC_MidPosterior_Vol,mm^3
+CC_Anterior number of voxels,FS_CC_Anterior_Vox,None
+CC_Anterior volume,FS_CC_Anterior_Vol,mm^3
+left bankssts number of vertices,FS_L_Bankssts_NumVert,None
+left bankssts surface area,FS_L_Bankssts_Area,mm^2
+left bankssts gray matter volume,FS_L_Bankssts_GrayVol,mm^3
+left bankssts average thickness,FS_L_Bankssts_Thck,mm
+left bankssts thickness standard deviation,FS_L_Bankssts_ThckStd,mm
+left bankssts integrated rectified mean curvature,FS_L_Bankssts_MeanCurv,mm^-1
+left caudalanteriorcingulate number of vertices,FS_L_Caudalanteriorcingulate_NumVert,None
+left caudalanteriorcingulate surface area,FS_L_Caudalanteriorcingulate_Area,mm^2
+left caudalanteriorcingulate gray matter volume,FS_L_Caudalanteriorcingulate_GrayVol,mm^3
+left caudalanteriorcingulate average thickness,FS_L_Caudalanteriorcingulate_Thck,mm
+left caudalanteriorcingulate thickness standard deviation,FS_L_Caudalanteriorcingulate_ThckStd,mm
+left caudalanteriorcingulate integrated rectified mean curvature,FS_L_Caudalanteriorcingulate_MeanCurv,mm^-1
+left caudalmiddlefrontal number of vertices,FS_L_Caudalmiddlefrontal_NumVert,None
+left caudalmiddlefrontal surface area,FS_L_Caudalmiddlefrontal_Area,mm^2
+left caudalmiddlefrontal gray matter volume,FS_L_Caudalmiddlefrontal_GrayVol,mm^3
+left caudalmiddlefrontal average thickness,FS_L_Caudalmiddlefrontal_Thck,mm
+left caudalmiddlefrontal thickness standard deviation,FS_L_Caudalmiddlefrontal_ThckStd,mm
+left caudalmiddlefrontal integrated rectified mean curvature,FS_L_Caudalmiddlefrontal_MeanCurv,mm^-1
+left cuneus number of vertices,FS_L_Cuneus_NumVert,None
+left cuneus surface area,FS_L_Cuneus_Area,mm^2
+left cuneus gray matter volume,FS_L_Cuneus_GrayVol,mm^3
+left cuneus average thickness,FS_L_Cuneus_Thck,mm
+left cuneus thickness standard deviation,FS_L_Cuneus_ThckStd,mm
+left cuneus integrated rectified mean curvature,FS_L_Cuneus_MeanCurv,mm^-1
+left entorhinal number of vertices,FS_L_Entorhinal_NumVert,None
+left entorhinal surface area,FS_L_Entorhinal_Area,mm^2
+left entorhinal gray matter volume,FS_L_Entorhinal_GrayVol,mm^3
+left entorhinal average thickness,FS_L_Entorhinal_Thck,mm
+left entorhinal thickness standard deviation,FS_L_Entorhinal_ThckStd,mm
+left entorhinal integrated rectified mean curvature,FS_L_Entorhinal_MeanCurv,mm^-1
+left fusiform number of vertices,FS_L_Fusiform_NumVert,None
+left fusiform surface area,FS_L_Fusiform_Area,mm^2
+left fusiform gray matter volume,FS_L_Fusiform_GrayVol,mm^3
+left fusiform average thickness,FS_L_Fusiform_Thck,mm
+left fusiform thickness standard deviation,FS_L_Fusiform_ThckStd,mm
+left fusiform integrated rectified mean curvature,FS_L_Fusiform_MeanCurv,mm^-1
+left inferiorparietal number of vertices,FS_L_Inferiorparietal_NumVert,None
+left inferiorparietal surface area,FS_L_Inferiorparietal_Area,mm^2
+left inferiorparietal gray matter volume,FS_L_Inferiorparietal_GrayVol,mm^3
+left inferiorparietal average thickness,FS_L_Inferiorparietal_Thck,mm
+left inferiorparietal thickness standard deviation,FS_L_Inferiorparietal_ThckStd,mm
+left inferiorparietal integrated rectified mean curvature,FS_L_Inferiorparietal_MeanCurv,mm^-1
+left inferiortemporal number of vertices,FS_L_Inferiortemporal_NumVert,None
+left inferiortemporal surface area,FS_L_Inferiortemporal_Area,mm^2
+left inferiortemporal gray matter volume,FS_L_Inferiortemporal_GrayVol,mm^3
+left inferiortemporal average thickness,FS_L_Inferiortemporal_Thck,mm
+left inferiortemporal thickness standard deviation,FS_L_Inferiortemporal_ThckStd,mm
+left inferiortemporal integrated rectified mean curvature,FS_L_Inferiortemporal_MeanCurv,mm^-1
+left isthmuscingulate number of vertices,FS_L_Isthmuscingulate_NumVert,None
+left isthmuscingulate surface area,FS_L_Isthmuscingulate_Area,mm^2
+left isthmuscingulate gray matter volume,FS_L_Isthmuscingulate_GrayVol,mm^3
+left isthmuscingulate average thickness,FS_L_Isthmuscingulate_Thck,mm
+left isthmuscingulate thickness standard deviation,FS_L_Isthmuscingulate_ThckStd,mm
+left isthmuscingulate integrated rectified mean curvature,FS_L_Isthmuscingulate_MeanCurv,mm^-1
+left lateraloccipital number of vertices,FS_L_Lateraloccipital_NumVert,None
+left lateraloccipital surface area,FS_L_Lateraloccipital_Area,mm^2
+left lateraloccipital gray matter volume,FS_L_Lateraloccipital_GrayVol,mm^3
+left lateraloccipital average thickness,FS_L_Lateraloccipital_Thck,mm
+left lateraloccipital thickness standard deviation,FS_L_Lateraloccipital_ThckStd,mm
+left lateraloccipital integrated rectified mean curvature,FS_L_Lateraloccipital_MeanCurv,mm^-1
+left lateralorbitofrontal number of vertices,FS_L_Lateralorbitofrontal_NumVert,None
+left lateralorbitofrontal surface area,FS_L_Lateralorbitofrontal_Area,mm^2
+left lateralorbitofrontal gray matter volume,FS_L_Lateralorbitofrontal_GrayVol,mm^3
+left lateralorbitofrontal average thickness,FS_L_Lateralorbitofrontal_Thck,mm
+left lateralorbitofrontal thickness standard deviation,FS_L_Lateralorbitofrontal_ThckStd,mm
+left lateralorbitofrontal integrated rectified mean curvature,FS_L_Lateralorbitofrontal_MeanCurv,mm^-1
+left lingual number of vertices,FS_L_Lingual_NumVert,None
+left lingual surface area,FS_L_Lingual_Area,mm^2
+left lingual gray matter volume,FS_L_Lingual_GrayVol,mm^3
+left lingual average thickness,FS_L_Lingual_Thck,mm
+left lingual thickness standard deviation,FS_L_Lingual_ThckStd,mm
+left lingual integrated rectified mean curvature,FS_L_Lingual_MeanCurv,mm^-1
+left medialorbitofrontal number of vertices,FS_L_Medialorbitofrontal_NumVert,None
+left medialorbitofrontal surface area,FS_L_Medialorbitofrontal_Area,mm^2
+left medialorbitofrontal gray matter volume,FS_L_Medialorbitofrontal_GrayVol,mm^3
+left medialorbitofrontal average thickness,FS_L_Medialorbitofrontal_Thck,mm
+left medialorbitofrontal thickness standard deviation,FS_L_Medialorbitofrontal_ThckStd,mm
+left medialorbitofrontal integrated rectified mean curvature,FS_L_Medialorbitofrontal_MeanCurv,mm^-1
+left middletemporal number of vertices,FS_L_Middletemporal_NumVert,None
+left middletemporal surface area,FS_L_Middletemporal_Area,mm^2
+left middletemporal gray matter volume,FS_L_Middletemporal_GrayVol,mm^3
+left middletemporal average thickness,FS_L_Middletemporal_Thck,mm
+left middletemporal thickness standard deviation,FS_L_Middletemporal_ThckStd,mm
+left middletemporal integrated rectified mean curvature,FS_L_Middletemporal_MeanCurv,mm^-1
+left parahippocampal number of vertices,FS_L_Parahippocampal_NumVert,None
+left parahippocampal surface area,FS_L_Parahippocampal_Area,mm^2
+left parahippocampal gray matter volume,FS_L_Parahippocampal_GrayVol,mm^3
+left parahippocampal average thickness,FS_L_Parahippocampal_Thck,mm
+left parahippocampal thickness standard deviation,FS_L_Parahippocampal_ThckStd,mm
+left parahippocampal integrated rectified mean curvature,FS_L_Parahippocampal_MeanCurv,mm^-1
+left paracentral number of vertices,FS_L_Paracentral_NumVert,None
+left paracentral surface area,FS_L_Paracentral_Area,mm^2
+left paracentral gray matter volume,FS_L_Paracentral_GrayVol,mm^3
+left paracentral average thickness,FS_L_Paracentral_Thck,mm
+left paracentral thickness standard deviation,FS_L_Paracentral_ThckStd,mm
+left paracentral integrated rectified mean curvature,FS_L_Paracentral_MeanCurv,mm^-1
+left parsopercularis number of vertices,FS_L_Parsopercularis_NumVert,None
+left parsopercularis surface area,FS_L_Parsopercularis_Area,mm^2
+left parsopercularis gray matter volume,FS_L_Parsopercularis_GrayVol,mm^3
+left parsopercularis average thickness,FS_L_Parsopercularis_Thck,mm
+left parsopercularis thickness standard deviation,FS_L_Parsopercularis_ThckStd,mm
+left parsopercularis integrated rectified mean curvature,FS_L_Parsopercularis_MeanCurv,mm^-1
+left parsorbitalis number of vertices,FS_L_Parsorbitalis_NumVert,None
+left parsorbitalis surface area,FS_L_Parsorbitalis_Area,mm^2
+left parsorbitalis gray matter volume,FS_L_Parsorbitalis_GrayVol,mm^3
+left parsorbitalis average thickness,FS_L_Parsorbitalis_Thck,mm
+left parsorbitalis thickness standard deviation,FS_L_Parsorbitalis_ThckStd,mm
+left parsorbitalis integrated rectified mean curvature,FS_L_Parsorbitalis_MeanCurv,mm^-1
+left parstriangularis number of vertices,FS_L_Parstriangularis_NumVert,None
+left parstriangularis surface area,FS_L_Parstriangularis_Area,mm^2
+left parstriangularis gray matter volume,FS_L_Parstriangularis_GrayVol,mm^3
+left parstriangularis average thickness,FS_L_Parstriangularis_Thck,mm
+left parstriangularis thickness standard deviation,FS_L_Parstriangularis_ThckStd,mm
+left parstriangularis integrated rectified mean curvature,FS_L_Parstriangularis_MeanCurv,mm^-1
+left pericalcarine number of vertices,FS_L_Pericalcarine_NumVert,None
+left pericalcarine surface area,FS_L_Pericalcarine_Area,mm^2
+left pericalcarine gray matter volume,FS_L_Pericalcarine_GrayVol,mm^3
+left pericalcarine average thickness,FS_L_Pericalcarine_Thck,mm
+left pericalcarine thickness standard deviation,FS_L_Pericalcarine_ThckStd,mm
+left pericalcarine integrated rectified mean curvature,FS_L_Pericalcarine_MeanCurv,mm^-1
+left postcentral number of vertices,FS_L_Postcentral_NumVert,None
+left postcentral surface area,FS_L_Postcentral_Area,mm^2
+left postcentral gray matter volume,FS_L_Postcentral_GrayVol,mm^3
+left postcentral average thickness,FS_L_Postcentral_Thck,mm
+left postcentral thickness standard deviation,FS_L_Postcentral_ThckStd,mm
+left postcentral integrated rectified mean curvature,FS_L_Postcentral_MeanCurv,mm^-1
+left posteriorcingulate number of vertices,FS_L_Posteriorcingulate_NumVert,None
+left posteriorcingulate surface area,FS_L_Posteriorcingulate_Area,mm^2
+left posteriorcingulate gray matter volume,FS_L_Posteriorcingulate_GrayVol,mm^3
+left posteriorcingulate average thickness,FS_L_Posteriorcingulate_Thck,mm
+left posteriorcingulate thickness standard deviation,FS_L_Posteriorcingulate_ThckStd,mm
+left posteriorcingulate integrated rectified mean curvature,FS_L_Posteriorcingulate_MeanCurv,mm^-1
+left precentral number of vertices,FS_L_Precentral_NumVert,None
+left precentral surface area,FS_L_Precentral_Area,mm^2
+left precentral gray matter volume,FS_L_Precentral_GrayVol,mm^3
+left precentral average thickness,FS_L_Precentral_Thck,mm
+left precentral thickness standard deviation,FS_L_Precentral_ThckStd,mm
+left precentral integrated rectified mean curvature,FS_L_Precentral_MeanCurv,mm^-1
+left precuneus number of vertices,FS_L_Precuneus_NumVert,None
+left precuneus surface area,FS_L_Precuneus_Area,mm^2
+left precuneus gray matter volume,FS_L_Precuneus_GrayVol,mm^3
+left precuneus average thickness,FS_L_Precuneus_Thck,mm
+left precuneus thickness standard deviation,FS_L_Precuneus_ThckStd,mm
+left precuneus integrated rectified mean curvature,FS_L_Precuneus_MeanCurv,mm^-1
+left rostralanteriorcingulate number of vertices,FS_L_Rostralanteriorcingulate_NumVert,None
+left rostralanteriorcingulate surface area,FS_L_Rostralanteriorcingulate_Area,mm^2
+left rostralanteriorcingulate gray matter volume,FS_L_Rostralanteriorcingulate_GrayVol,mm^3
+left rostralanteriorcingulate average thickness,FS_L_Rostralanteriorcingulate_Thck,mm
+left rostralanteriorcingulate thickness standard deviation,FS_L_Rostralanteriorcingulate_ThckStd,mm
+left rostralanteriorcingulate integrated rectified mean curvature,FS_L_Rostralanteriorcingulate_MeanCurv,mm^-1
+left rostralmiddlefrontal number of vertices,FS_L_Rostralmiddlefrontal_NumVert,None
+left rostralmiddlefrontal surface area,FS_L_Rostralmiddlefrontal_Area,mm^2
+left rostralmiddlefrontal gray matter volume,FS_L_Rostralmiddlefrontal_GrayVol,mm^3
+left rostralmiddlefrontal average thickness,FS_L_Rostralmiddlefrontal_Thck,mm
+left rostralmiddlefrontal thickness standard deviation,FS_L_Rostralmiddlefrontal_ThckStd,mm
+left rostralmiddlefrontal integrated rectified mean curvature,FS_L_Rostralmiddlefrontal_MeanCurv,mm^-1
+left superiorfrontal number of vertices,FS_L_Superiorfrontal_NumVert,None
+left superiorfrontal surface area,FS_L_Superiorfrontal_Area,mm^2
+left superiorfrontal gray matter volume,FS_L_Superiorfrontal_GrayVol,mm^3
+left superiorfrontal average thickness,FS_L_Superiorfrontal_Thck,mm
+left superiorfrontal thickness standard deviation,FS_L_Superiorfrontal_ThckStd,mm
+left superiorfrontal integrated rectified mean curvature,FS_L_Superiorfrontal_MeanCurv,mm^-1
+left superiorparietal number of vertices,FS_L_Superiorparietal_NumVert,None
+left superiorparietal surface area,FS_L_Superiorparietal_Area,mm^2
+left superiorparietal gray matter volume,FS_L_Superiorparietal_GrayVol,mm^3
+left superiorparietal average thickness,FS_L_Superiorparietal_Thck,mm
+left superiorparietal thickness standard deviation,FS_L_Superiorparietal_ThckStd,mm
+left superiorparietal integrated rectified mean curvature,FS_L_Superiorparietal_MeanCurv,mm^-1
+left superiortemporal number of vertices,FS_L_Superiortemporal_NumVert,None
+left superiortemporal surface area,FS_L_Superiortemporal_Area,mm^2
+left superiortemporal gray matter volume,FS_L_Superiortemporal_GrayVol,mm^3
+left superiortemporal average thickness,FS_L_Superiortemporal_Thck,mm
+left superiortemporal thickness standard deviation,FS_L_Superiortemporal_ThckStd,mm
+left superiortemporal integrated rectified mean curvature,FS_L_Superiortemporal_MeanCurv,mm^-1
+left supramarginal number of vertices,FS_L_Supramarginal_NumVert,None
+left supramarginal surface area,FS_L_Supramarginal_Area,mm^2
+left supramarginal gray matter volume,FS_L_Supramarginal_GrayVol,mm^3
+left supramarginal average thickness,FS_L_Supramarginal_Thck,mm
+left supramarginal thickness standard deviation,FS_L_Supramarginal_ThckStd,mm
+left supramarginal integrated rectified mean curvature,FS_L_Supramarginal_MeanCurv,mm^-1
+left frontalpole number of vertices,FS_L_Frontalpole_NumVert,None
+left frontalpole surface area,FS_L_Frontalpole_Area,mm^2
+left frontalpole gray matter volume,FS_L_Frontalpole_GrayVol,mm^3
+left frontalpole average thickness,FS_L_Frontalpole_Thck,mm
+left frontalpole thickness standard deviation,FS_L_Frontalpole_ThckStd,mm
+left frontalpole integrated rectified mean curvature,FS_L_Frontalpole_MeanCurv,mm^-1
+left temporalpole number of vertices,FS_L_Temporalpole_NumVert,None
+left temporalpole surface area,FS_L_Temporalpole_Area,mm^2
+left temporalpole gray matter volume,FS_L_Temporalpole_GrayVol,mm^3
+left temporalpole average thickness,FS_L_Temporalpole_Thck,mm
+left temporalpole thickness standard deviation,FS_L_Temporalpole_ThckStd,mm
+left temporalpole integrated rectified mean curvature,FS_L_Temporalpole_MeanCurv,mm^-1
+left transversetemporal number of vertices,FS_L_Transversetemporal_NumVert,None
+left transversetemporal surface area,FS_L_Transversetemporal_Area,mm^2
+left transversetemporal gray matter volume,FS_L_Transversetemporal_GrayVol,mm^3
+left transversetemporal average thickness,FS_L_Transversetemporal_Thck,mm
+left transversetemporal thickness standard deviation,FS_L_Transversetemporal_ThckStd,mm
+left transversetemporal integrated rectified mean curvature,FS_L_Transversetemporal_MeanCurv,mm^-1
+left insula number of vertices,FS_L_Insula_NumVert,None
+left insula surface area,FS_L_Insula_Area,mm^2
+left insula gray matter volume,FS_L_Insula_GrayVol,mm^3
+left insula average thickness,FS_L_Insula_Thck,mm
+left insula thickness standard deviation,FS_L_Insula_ThckStd,mm
+left insula integrated rectified mean curvature,FS_L_Insula_MeanCurv,mm^-1
+right bankssts number of vertices,FS_R_Bankssts_NumVert,None
+right bankssts surface area,FS_R_Bankssts_Area,mm^2
+right bankssts gray matter volume,FS_R_Bankssts_GrayVol,mm^3
+right bankssts average thickness,FS_R_Bankssts_Thck,mm
+right bankssts thickness standard deviation,FS_R_Bankssts_ThckStd,mm
+right bankssts integrated rectified mean curvature,FS_R_Bankssts_MeanCurv,mm^-1
+right caudalanteriorcingulate number of vertices,FS_R_Caudalanteriorcingulate_NumVert,None
+right caudalanteriorcingulate surface area,FS_R_Caudalanteriorcingulate_Area,mm^2
+right caudalanteriorcingulate gray matter volume,FS_R_Caudalanteriorcingulate_GrayVol,mm^3
+right caudalanteriorcingulate average thickness,FS_R_Caudalanteriorcingulate_Thck,mm
+right caudalanteriorcingulate thickness standard deviation,FS_R_Caudalanteriorcingulate_ThckStd,mm
+right caudalanteriorcingulate integrated rectified mean curvature,FS_R_Caudalanteriorcingulate_MeanCurv,mm^-1
+right caudalmiddlefrontal number of vertices,FS_R_Caudalmiddlefrontal_NumVert,None
+right caudalmiddlefrontal surface area,FS_R_Caudalmiddlefrontal_Area,mm^2
+right caudalmiddlefrontal gray matter volume,FS_R_Caudalmiddlefrontal_GrayVol,mm^3
+right caudalmiddlefrontal average thickness,FS_R_Caudalmiddlefrontal_Thck,mm
+right caudalmiddlefrontal thickness standard deviation,FS_R_Caudalmiddlefrontal_ThckStd,mm
+right caudalmiddlefrontal integrated rectified mean curvature,FS_R_Caudalmiddlefrontal_MeanCurv,mm^-1
+right cuneus number of vertices,FS_R_Cuneus_NumVert,None
+right cuneus surface area,FS_R_Cuneus_Area,mm^2
+right cuneus gray matter volume,FS_R_Cuneus_GrayVol,mm^3
+right cuneus average thickness,FS_R_Cuneus_Thck,mm
+right cuneus thickness standard deviation,FS_R_Cuneus_ThckStd,mm
+right cuneus integrated rectified mean curvature,FS_R_Cuneus_MeanCurv,mm^-1
+right entorhinal number of vertices,FS_R_Entorhinal_NumVert,None
+right entorhinal surface area,FS_R_Entorhinal_Area,mm^2
+right entorhinal gray matter volume,FS_R_Entorhinal_GrayVol,mm^3
+right entorhinal average thickness,FS_R_Entorhinal_Thck,mm
+right entorhinal thickness standard deviation,FS_R_Entorhinal_ThckStd,mm
+right entorhinal integrated rectified mean curvature,FS_R_Entorhinal_MeanCurv,mm^-1
+right fusiform number of vertices,FS_R_Fusiform_NumVert,None
+right fusiform surface area,FS_R_Fusiform_Area,mm^2
+right fusiform gray matter volume,FS_R_Fusiform_GrayVol,mm^3
+right fusiform average thickness,FS_R_Fusiform_Thck,mm
+right fusiform thickness standard deviation,FS_R_Fusiform_ThckStd,mm
+right fusiform integrated rectified mean curvature,FS_R_Fusiform_MeanCurv,mm^-1
+right inferiorparietal number of vertices,FS_R_Inferiorparietal_NumVert,None
+right inferiorparietal surface area,FS_R_Inferiorparietal_Area,mm^2
+right inferiorparietal gray matter volume,FS_R_Inferiorparietal_GrayVol,mm^3
+right inferiorparietal average thickness,FS_R_Inferiorparietal_Thck,mm
+right inferiorparietal thickness standard deviation,FS_R_Inferiorparietal_ThckStd,mm
+right inferiorparietal integrated rectified mean curvature,FS_R_Inferiorparietal_MeanCurv,mm^-1
+right inferiortemporal number of vertices,FS_R_Inferiortemporal_NumVert,None
+right inferiortemporal surface area,FS_R_Inferiortemporal_Area,mm^2
+right inferiortemporal gray matter volume,FS_R_Inferiortemporal_GrayVol,mm^3
+right inferiortemporal average thickness,FS_R_Inferiortemporal_Thck,mm
+right inferiortemporal thickness standard deviation,FS_R_Inferiortemporal_ThckStd,mm
+right inferiortemporal integrated rectified mean curvature,FS_R_Inferiortemporal_MeanCurv,mm^-1
+right isthmuscingulate number of vertices,FS_R_Isthmuscingulate_NumVert,None
+right isthmuscingulate surface area,FS_R_Isthmuscingulate_Area,mm^2
+right isthmuscingulate gray matter volume,FS_R_Isthmuscingulate_GrayVol,mm^3
+right isthmuscingulate average thickness,FS_R_Isthmuscingulate_Thck,mm
+right isthmuscingulate thickness standard deviation,FS_R_Isthmuscingulate_ThckStd,mm
+right isthmuscingulate integrated rectified mean curvature,FS_R_Isthmuscingulate_MeanCurv,mm^-1
+right lateraloccipital number of vertices,FS_R_Lateraloccipital_NumVert,None
+right lateraloccipital surface area,FS_R_Lateraloccipital_Area,mm^2
+right lateraloccipital gray matter volume,FS_R_Lateraloccipital_GrayVol,mm^3
+right lateraloccipital average thickness,FS_R_Lateraloccipital_Thck,mm
+right lateraloccipital thickness standard deviation,FS_R_Lateraloccipital_ThckStd,mm
+right lateraloccipital integrated rectified mean curvature,FS_R_Lateraloccipital_MeanCurv,mm^-1
+right lateralorbitofrontal number of vertices,FS_R_Lateralorbitofrontal_NumVert,None
+right lateralorbitofrontal surface area,FS_R_Lateralorbitofrontal_Area,mm^2
+right lateralorbitofrontal gray matter volume,FS_R_Lateralorbitofrontal_GrayVol,mm^3
+right lateralorbitofrontal average thickness,FS_R_Lateralorbitofrontal_Thck,mm
+right lateralorbitofrontal thickness standard deviation,FS_R_Lateralorbitofrontal_ThckStd,mm
+right lateralorbitofrontal integrated rectified mean curvature,FS_R_Lateralorbitofrontal_MeanCurv,mm^-1
+right lingual number of vertices,FS_R_Lingual_NumVert,None
+right lingual surface area,FS_R_Lingual_Area,mm^2
+right lingual gray matter volume,FS_R_Lingual_GrayVol,mm^3
+right lingual average thickness,FS_R_Lingual_Thck,mm
+right lingual thickness standard deviation,FS_R_Lingual_ThckStd,mm
+right lingual integrated rectified mean curvature,FS_R_Lingual_MeanCurv,mm^-1
+right medialorbitofrontal number of vertices,FS_R_Medialorbitofrontal_NumVert,None
+right medialorbitofrontal surface area,FS_R_Medialorbitofrontal_Area,mm^2
+right medialorbitofrontal gray matter volume,FS_R_Medialorbitofrontal_GrayVol,mm^3
+right medialorbitofrontal average thickness,FS_R_Medialorbitofrontal_Thck,mm
+right medialorbitofrontal thickness standard deviation,FS_R_Medialorbitofrontal_ThckStd,mm
+right medialorbitofrontal integrated rectified mean curvature,FS_R_Medialorbitofrontal_MeanCurv,mm^-1
+right middletemporal number of vertices,FS_R_Middletemporal_NumVert,None
+right middletemporal surface area,FS_R_Middletemporal_Area,mm^2
+right middletemporal gray matter volume,FS_R_Middletemporal_GrayVol,mm^3
+right middletemporal average thickness,FS_R_Middletemporal_Thck,mm
+right middletemporal thickness standard deviation,FS_R_Middletemporal_ThckStd,mm
+right middletemporal integrated rectified mean curvature,FS_R_Middletemporal_MeanCurv,mm^-1
+right parahippocampal number of vertices,FS_R_Parahippocampal_NumVert,None
+right parahippocampal surface area,FS_R_Parahippocampal_Area,mm^2
+right parahippocampal gray matter volume,FS_R_Parahippocampal_GrayVol,mm^3
+right parahippocampal average thickness,FS_R_Parahippocampal_Thck,mm
+right parahippocampal thickness standard deviation,FS_R_Parahippocampal_ThckStd,mm
+right parahippocampal integrated rectified mean curvature,FS_R_Parahippocampal_MeanCurv,mm^-1
+right paracentral number of vertices,FS_R_Paracentral_NumVert,None
+right paracentral surface area,FS_R_Paracentral_Area,mm^2
+right paracentral gray matter volume,FS_R_Paracentral_GrayVol,mm^3
+right paracentral average thickness,FS_R_Paracentral_Thck,mm
+right paracentral thickness standard deviation,FS_R_Paracentral_ThckStd,mm
+right paracentral integrated rectified mean curvature,FS_R_Paracentral_MeanCurv,mm^-1
+right parsopercularis number of vertices,FS_R_Parsopercularis_NumVert,None
+right parsopercularis surface area,FS_R_Parsopercularis_Area,mm^2
+right parsopercularis gray matter volume,FS_R_Parsopercularis_GrayVol,mm^3
+right parsopercularis average thickness,FS_R_Parsopercularis_Thck,mm
+right parsopercularis thickness standard deviation,FS_R_Parsopercularis_ThckStd,mm
+right parsopercularis integrated rectified mean curvature,FS_R_Parsopercularis_MeanCurv,mm^-1
+right parsorbitalis number of vertices,FS_R_Parsorbitalis_NumVert,None
+right parsorbitalis surface area,FS_R_Parsorbitalis_Area,mm^2
+right parsorbitalis gray matter volume,FS_R_Parsorbitalis_GrayVol,mm^3
+right parsorbitalis average thickness,FS_R_Parsorbitalis_Thck,mm
+right parsorbitalis thickness standard deviation,FS_R_Parsorbitalis_ThckStd,mm
+right parsorbitalis integrated rectified mean curvature,FS_R_Parsorbitalis_MeanCurv,mm^-1
+right parstriangularis number of vertices,FS_R_Parstriangularis_NumVert,None
+right parstriangularis surface area,FS_R_Parstriangularis_Area,mm^2
+right parstriangularis gray matter volume,FS_R_Parstriangularis_GrayVol,mm^3
+right parstriangularis average thickness,FS_R_Parstriangularis_Thck,mm
+right parstriangularis thickness standard deviation,FS_R_Parstriangularis_ThckStd,mm
+right parstriangularis integrated rectified mean curvature,FS_R_Parstriangularis_MeanCurv,mm^-1
+right pericalcarine number of vertices,FS_R_Pericalcarine_NumVert,None
+right pericalcarine surface area,FS_R_Pericalcarine_Area,mm^2
+right pericalcarine gray matter volume,FS_R_Pericalcarine_GrayVol,mm^3
+right pericalcarine average thickness,FS_R_Pericalcarine_Thck,mm
+right pericalcarine thickness standard deviation,FS_R_Pericalcarine_ThckStd,mm
+right pericalcarine integrated rectified mean curvature,FS_R_Pericalcarine_MeanCurv,mm^-1
+right postcentral number of vertices,FS_R_Postcentral_NumVert,None
+right postcentral surface area,FS_R_Postcentral_Area,mm^2
+right postcentral gray matter volume,FS_R_Postcentral_GrayVol,mm^3
+right postcentral average thickness,FS_R_Postcentral_Thck,mm
+right postcentral thickness standard deviation,FS_R_Postcentral_ThckStd,mm
+right postcentral integrated rectified mean curvature,FS_R_Postcentral_MeanCurv,mm^-1
+right posteriorcingulate number of vertices,FS_R_Posteriorcingulate_NumVert,None
+right posteriorcingulate surface area,FS_R_Posteriorcingulate_Area,mm^2
+right posteriorcingulate gray matter volume,FS_R_Posteriorcingulate_GrayVol,mm^3
+right posteriorcingulate average thickness,FS_R_Posteriorcingulate_Thck,mm
+right posteriorcingulate thickness standard deviation,FS_R_Posteriorcingulate_ThckStd,mm
+right posteriorcingulate integrated rectified mean curvature,FS_R_Posteriorcingulate_MeanCurv,mm^-1
+right precentral number of vertices,FS_R_Precentral_NumVert,None
+right precentral surface area,FS_R_Precentral_Area,mm^2
+right precentral gray matter volume,FS_R_Precentral_GrayVol,mm^3
+right precentral average thickness,FS_R_Precentral_Thck,mm
+right precentral thickness standard deviation,FS_R_Precentral_ThckStd,mm
+right precentral integrated rectified mean curvature,FS_R_Precentral_MeanCurv,mm^-1
+right precuneus number of vertices,FS_R_Precuneus_NumVert,None
+right precuneus surface area,FS_R_Precuneus_Area,mm^2
+right precuneus gray matter volume,FS_R_Precuneus_GrayVol,mm^3
+right precuneus average thickness,FS_R_Precuneus_Thck,mm
+right precuneus thickness standard deviation,FS_R_Precuneus_ThckStd,mm
+right precuneus integrated rectified mean curvature,FS_R_Precuneus_MeanCurv,mm^-1
+right rostralanteriorcingulate number of vertices,FS_R_Rostralanteriorcingulate_NumVert,None
+right rostralanteriorcingulate surface area,FS_R_Rostralanteriorcingulate_Area,mm^2
+right rostralanteriorcingulate gray matter volume,FS_R_Rostralanteriorcingulate_GrayVol,mm^3
+right rostralanteriorcingulate average thickness,FS_R_Rostralanteriorcingulate_Thck,mm
+right rostralanteriorcingulate thickness standard deviation,FS_R_Rostralanteriorcingulate_ThckStd,mm
+right rostralanteriorcingulate integrated rectified mean curvature,FS_R_Rostralanteriorcingulate_MeanCurv,mm^-1
+right rostralmiddlefrontal number of vertices,FS_R_Rostralmiddlefrontal_NumVert,None
+right rostralmiddlefrontal surface area,FS_R_Rostralmiddlefrontal_Area,mm^2
+right rostralmiddlefrontal gray matter volume,FS_R_Rostralmiddlefrontal_GrayVol,mm^3
+right rostralmiddlefrontal average thickness,FS_R_Rostralmiddlefrontal_Thck,mm
+right rostralmiddlefrontal thickness standard deviation,FS_R_Rostralmiddlefrontal_ThckStd,mm
+right rostralmiddlefrontal integrated rectified mean curvature,FS_R_Rostralmiddlefrontal_MeanCurv,mm^-1
+right superiorfrontal number of vertices,FS_R_Superiorfrontal_NumVert,None
+right superiorfrontal surface area,FS_R_Superiorfrontal_Area,mm^2
+right superiorfrontal gray matter volume,FS_R_Superiorfrontal_GrayVol,mm^3
+right superiorfrontal average thickness,FS_R_Superiorfrontal_Thck,mm
+right superiorfrontal thickness standard deviation,FS_R_Superiorfrontal_ThckStd,mm
+right superiorfrontal integrated rectified mean curvature,FS_R_Superiorfrontal_MeanCurv,mm^-1
+right superiorparietal number of vertices,FS_R_Superiorparietal_NumVert,None
+right superiorparietal surface area,FS_R_Superiorparietal_Area,mm^2
+right superiorparietal gray matter volume,FS_R_Superiorparietal_GrayVol,mm^3
+right superiorparietal average thickness,FS_R_Superiorparietal_Thck,mm
+right superiorparietal thickness standard deviation,FS_R_Superiorparietal_ThckStd,mm
+right superiorparietal integrated rectified mean curvature,FS_R_Superiorparietal_MeanCurv,mm^-1
+right superiortemporal number of vertices,FS_R_Superiortemporal_NumVert,None
+right superiortemporal surface area,FS_R_Superiortemporal_Area,mm^2
+right superiortemporal gray matter volume,FS_R_Superiortemporal_GrayVol,mm^3
+right superiortemporal average thickness,FS_R_Superiortemporal_Thck,mm
+right superiortemporal thickness standard deviation,FS_R_Superiortemporal_ThckStd,mm
+right superiortemporal integrated rectified mean curvature,FS_R_Superiortemporal_MeanCurv,mm^-1
+right supramarginal number of vertices,FS_R_Supramarginal_NumVert,None
+right supramarginal surface area,FS_R_Supramarginal_Area,mm^2
+right supramarginal gray matter volume,FS_R_Supramarginal_GrayVol,mm^3
+right supramarginal average thickness,FS_R_Supramarginal_Thck,mm
+right supramarginal thickness standard deviation,FS_R_Supramarginal_ThckStd,mm
+right supramarginal integrated rectified mean curvature,FS_R_Supramarginal_MeanCurv,mm^-1
+right frontalpole number of vertices,FS_R_Frontalpole_NumVert,None
+right frontalpole surface area,FS_R_Frontalpole_Area,mm^2
+right frontalpole gray matter volume,FS_R_Frontalpole_GrayVol,mm^3
+right frontalpole average thickness,FS_R_Frontalpole_Thck,mm
+right frontalpole thickness standard deviation,FS_R_Frontalpole_ThckStd,mm
+right frontalpole integrated rectified mean curvature,FS_R_Frontalpole_MeanCurv,mm^-1
+right temporalpole number of vertices,FS_R_Temporalpole_NumVert,None
+right temporalpole surface area,FS_R_Temporalpole_Area,mm^2
+right temporalpole gray matter volume,FS_R_Temporalpole_GrayVol,mm^3
+right temporalpole average thickness,FS_R_Temporalpole_Thck,mm
+right temporalpole thickness standard deviation,FS_R_Temporalpole_ThckStd,mm
+right temporalpole integrated rectified mean curvature,FS_R_Temporalpole_MeanCurv,mm^-1
+right transversetemporal number of vertices,FS_R_Transversetemporal_NumVert,None
+right transversetemporal surface area,FS_R_Transversetemporal_Area,mm^2
+right transversetemporal gray matter volume,FS_R_Transversetemporal_GrayVol,mm^3
+right transversetemporal average thickness,FS_R_Transversetemporal_Thck,mm
+right transversetemporal thickness standard deviation,FS_R_Transversetemporal_ThckStd,mm
+right transversetemporal integrated rectified mean curvature,FS_R_Transversetemporal_MeanCurv,mm^-1
+right insula number of vertices,FS_R_Insula_NumVert,None
+right insula surface area,FS_R_Insula_Area,mm^2
+right insula gray matter volume,FS_R_Insula_GrayVol,mm^3
+right insula average thickness,FS_R_Insula_Thck,mm
+right insula thickness standard deviation,FS_R_Insula_ThckStd,mm
+right insula integrated rectified mean curvature,FS_R_Insula_MeanCurv,mm^-1

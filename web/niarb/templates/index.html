@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Niarb - Home</title>
+    <link rel="stylesheet" href="../static/bootstrap5/css/bootstrap.min.css">
+
+    <style>
+        .navbar .active {
+            background-color: #eae5e9 !important;
+        }
+
+        .navbar-nav a {
+            margin-right: 2rem;
+        }
+
+        .bg {
+            background-image: url("../static/images/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#">
+                    <img src="../static/images/logo.jpg" width="30" height="30">
+                    Niarb
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-5">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/structural/">Structural</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/functional/">Functional</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/diffusion/">Diffusion</a>
+                        </li>
+
+                        <li>
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <input class="form-control me-2" id="question" placeholder="Put your question ...">
+                <button class="btn btn-outline-success me-5" onclick="process_question()">Askme</button>
+
+                {% if request.user.is_authenticated %}
+                <a href="/logout/">
+                    <button class="btn btn-outline-success" type="submit">logout</button>
+                </a>
+                {% else %}
+                <a href="/login/">
+                    <button class="btn btn-outline-success" type="submit">login</button>
+                </a>
+                {% endif %}
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <div class="text-center">
+                        <h1 class="display-1 text-white">Niarb</h1>
+                        <h4 class="display-5 text-white">Natural Image Processing</h4>
+                        <h4 class="display-5 text-white">Knowledge Acquisition And Intelligent Diagnostic</h4>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <div class="p-3 border border-primary bg-primary bg-opacity-10 rounded">
+                                <div class="text-center">
+                                    <h4 class="display-7 text-primary">About Structural Image</h4>
+                                    <div class="display-7 text-primary">
+                                        We used the HCP1200 dataset to statistically analyze the participants, extracted hundreds of volume, thickness and other indicators, and provided a basic Benchmark.
+                                        For the input of each structure image, use FreeSurfer recon-all to reconstruct and extract the relevant indicators, and check with the above benchmark to find the differences or anomalies.
+                                        For each anomaly, we construct questions to enter ChatGPT to obtain the possible results or effects of this anomaly, thereby guiding our research.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border border-success bg-success bg-opacity-10 rounded">
+                                <div class="text-center">
+                                    <h4 class="display-7 text-success">About Functional Image</h4>
+                                    <div class="display-7 text-success">
+                                        For resting functional images, we mainly perform functional network analysis. Similarly, using the public dataset, based on the Shaefer2018 partition template, AFNI is used to construct a brain network to extract some topological indicators to generate a basic benchmark.
+                                        For the input of each functional image, the network is constructed in the above way and the indicators and benchmark checks are extracted to find the anomalies, based on chatGPT and the impact of our knowledge graph acquisition, so as to provide guidance for research.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border border-warning bg-warning bg-opacity-10 rounded">
+                                <div class="text-center">
+                                    <h4 class="display-7 text-warning">About Diffusion Image</h4>
+                                    <div class="display-7 text-warning">
+                                        For diffusion tensor imaging, we mainly perform structural network analysis. Similarly, using the public dataset, based on the Shaefer2018 partition template, DSI STUDIO is used to build a brain network to extract some topological indicators to generate basic benchmarks.
+                                        For each diffuse image input, the network is constructed in the above way and the anomalies are found by extracting indicators and benchmark verification, based on chatGPT and the impact of our knowledge graph acquisition, so as to provide guidance for research.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer text-center fixed-bottom">
+            <div class="container">
+                <p class="text-muted">Contact us: cute-giggle@outlook.com</p>
+                <p class="text-muted">Copyright © 2023 Niarb Team. All rights reserved.</p>
+                <p></p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="answer_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <div class="p-3 border border-info bg-info bg-opacity-10 rounded" id="question_border">
+                        <div id="question_body">What is the meaning of life?</div>
+                    </div>
+                    <br>
+                    <div class="p-3 border border-success bg-success bg-opacity-10 rounded" id="question_border">
+                        <div id="answer_body">
+                            <div class='spinner-border text-primary' role='status'></div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/jquery/jquery-3.6.4.min.js"></script>
+    <script src="../static/bootstrap5/js/bootstrap.min.js"></script>
+
+    <script>
+        function process_question() {
+            var question = document.getElementById("question").value;
+            if (question == "") {
+                question = "What is the meaning of life?";
+            }
+            document.getElementById("question_body").innerHTML = question;
+            document.getElementById("answer_body").innerHTML = "<div class='spinner-border text-primary' role='status'></div>";
+
+            $('#answer_modal').modal('show');
+            $.ajax({
+                url: '/askme/',
+                type: 'POST',
+                data: {
+                    'question': question,
+                },
+                success: function (response) {
+                    response = JSON.parse(response);
+                    document.getElementById("answer_body").innerHTML = response["answer"];
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

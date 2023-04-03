@@ -1,0 +1,524 @@
+indicator_name
+Brain Segmentation Volume
+Brain Segmentation Volume Without Ventricles
+Left hemisphere cortical gray matter volume
+Right hemisphere cortical gray matter volume
+Total cortical gray matter volume
+Subcortical gray matter volume
+Total gray matter volume
+Supratentorial volume
+SupraTentorialVolNotVent
+Left hemisphere cerebral white matter volume
+Right hemisphere cerebral white matter volume
+Total cerebral white matter volume
+Mask Volume
+Ratio of BrainSegVol to eTIV
+Ratio of MaskVol to eTIV
+Number of defect holes in lh surfaces prior to fixing
+Number of defect holes in rh surfaces prior to fixing
+Total number of defect holes in surfaces prior to fixing
+Left-Lateral-Ventricle volume
+Left-Inf-Lat-Vent volume
+Left-Cerebellum-White-Matter volume
+Left-Cerebellum-Cortex volume
+Left-Thalamus volume
+Left-Caudate volume
+Left-Putamen volume
+Left-Pallidum volume
+3rd-Ventricle volume
+4th-Ventricle volume
+Brain-Stem volume
+Left-Hippocampus volume
+Left-Amygdala volume
+CSF volume
+Left-Accumbens-area volume
+Left-VentralDC volume
+Left-vessel volume
+Left-choroid-plexus volume
+Right-Lateral-Ventricle volume
+Right-Inf-Lat-Vent volume
+Right-Cerebellum-White-Matter volume
+Right-Thalamus volume
+Right-Caudate volume
+Right-Putamen volume
+Right-Pallidum volume
+Right-Hippocampus volume
+Right-Amygdala volume
+Right-Accumbens-area volume
+Right-VentralDC volume
+Right-vessel volume
+Right-choroid-plexus volume
+5th-Ventricle volume
+WM-hypointensities volume
+Left-WM-hypointensities volume
+Right-WM-hypointensities volume
+Left-non-WM-hypointensities volume
+Right-non-WM-hypointensities volume
+Optic-Chiasm volume
+CC_Posterior volume
+CC_Mid_Anterior volume
+CC_Central volume
+CC_Anterior volume
+Left-Lateral-Ventricle number of voxels
+Left-Cerebellum-White-Matter number of voxels
+Left-Cerebellum-Cortex number of voxels
+Left-Thalamus number of voxels
+Left-Caudate number of voxels
+Left-Putamen number of voxels
+Left-Pallidum number of voxels
+3rd-Ventricle number of voxels
+4th-Ventricle number of voxels
+Brain-Stem number of voxels
+Left-Hippocampus number of voxels
+Left-Amygdala number of voxels
+CSF number of voxels
+Left-Accumbens-area number of voxels
+Left-VentralDC number of voxels
+Left-vessel number of voxels
+Left-choroid-plexus number of voxels
+Right-Lateral-Ventricle number of voxels
+Right-Inf-Lat-Vent number of voxels
+Right-Cerebellum-White-Matter number of voxels
+Right-Thalamus number of voxels
+Right-Caudate number of voxels
+Right-Putamen number of voxels
+Right-Pallidum number of voxels
+Right-Hippocampus number of voxels
+Right-Amygdala number of voxels
+Right-Accumbens-area number of voxels
+Right-VentralDC number of voxels
+Right-vessel number of voxels
+Right-choroid-plexus number of voxels
+5th-Ventricle number of voxels
+WM-hypointensities number of voxels
+Left-WM-hypointensities number of voxels
+Right-WM-hypointensities number of voxels
+Left-non-WM-hypointensities number of voxels
+Right-non-WM-hypointensities number of voxels
+Optic-Chiasm number of voxels
+CC_Posterior number of voxels
+CC_Mid_Anterior number of voxels
+CC_Central number of voxels
+CC_Anterior number of voxels
+left bankssts average thickness
+left caudalanteriorcingulate average thickness
+left caudalmiddlefrontal average thickness
+left cuneus average thickness
+left entorhinal average thickness
+left fusiform average thickness
+left inferiorparietal average thickness
+left inferiortemporal average thickness
+left isthmuscingulate average thickness
+left lateraloccipital average thickness
+left lateralorbitofrontal average thickness
+left lingual average thickness
+left medialorbitofrontal average thickness
+left middletemporal average thickness
+left parahippocampal average thickness
+left paracentral average thickness
+left parsopercularis average thickness
+left parsorbitalis average thickness
+left parstriangularis average thickness
+left pericalcarine average thickness
+left postcentral average thickness
+left posteriorcingulate average thickness
+left precentral average thickness
+left precuneus average thickness
+left rostralanteriorcingulate average thickness
+left rostralmiddlefrontal average thickness
+left superiorfrontal average thickness
+left superiorparietal average thickness
+left superiortemporal average thickness
+left supramarginal average thickness
+left frontalpole average thickness
+left temporalpole average thickness
+left transversetemporal average thickness
+left insula average thickness
+right bankssts average thickness
+right caudalanteriorcingulate average thickness
+right caudalmiddlefrontal average thickness
+right cuneus average thickness
+right entorhinal average thickness
+right fusiform average thickness
+right inferiorparietal average thickness
+right inferiortemporal average thickness
+right isthmuscingulate average thickness
+right lateraloccipital average thickness
+right lateralorbitofrontal average thickness
+right lingual average thickness
+right medialorbitofrontal average thickness
+right middletemporal average thickness
+right parahippocampal average thickness
+right paracentral average thickness
+right parsopercularis average thickness
+right parsorbitalis average thickness
+right parstriangularis average thickness
+right pericalcarine average thickness
+right postcentral average thickness
+right posteriorcingulate average thickness
+right precentral average thickness
+right precuneus average thickness
+right rostralanteriorcingulate average thickness
+right rostralmiddlefrontal average thickness
+right superiorfrontal average thickness
+right superiorparietal average thickness
+right superiortemporal average thickness
+right supramarginal average thickness
+right frontalpole average thickness
+right temporalpole average thickness
+right transversetemporal average thickness
+right insula average thickness
+left bankssts surface area
+left caudalanteriorcingulate surface area
+left caudalmiddlefrontal surface area
+left cuneus surface area
+left entorhinal surface area
+left fusiform surface area
+left inferiorparietal surface area
+left inferiortemporal surface area
+left isthmuscingulate surface area
+left lateraloccipital surface area
+left lateralorbitofrontal surface area
+left lingual surface area
+left medialorbitofrontal surface area
+left middletemporal surface area
+left parahippocampal surface area
+left paracentral surface area
+left parsopercularis surface area
+left parsorbitalis surface area
+left parstriangularis surface area
+left pericalcarine surface area
+left postcentral surface area
+left posteriorcingulate surface area
+left precentral surface area
+left precuneus surface area
+left rostralanteriorcingulate surface area
+left rostralmiddlefrontal surface area
+left superiorfrontal surface area
+left superiorparietal surface area
+left superiortemporal surface area
+left supramarginal surface area
+left frontalpole surface area
+left temporalpole surface area
+left transversetemporal surface area
+left insula surface area
+right bankssts surface area
+right caudalanteriorcingulate surface area
+right caudalmiddlefrontal surface area
+right cuneus surface area
+right entorhinal surface area
+right fusiform surface area
+right inferiorparietal surface area
+right inferiortemporal surface area
+right isthmuscingulate surface area
+right lateraloccipital surface area
+right lateralorbitofrontal surface area
+right lingual surface area
+right medialorbitofrontal surface area
+right middletemporal surface area
+right parahippocampal surface area
+right paracentral surface area
+right parsopercularis surface area
+right parsorbitalis surface area
+right parstriangularis surface area
+right pericalcarine surface area
+right postcentral surface area
+right posteriorcingulate surface area
+right precentral surface area
+right precuneus surface area
+right rostralanteriorcingulate surface area
+right rostralmiddlefrontal surface area
+right superiorfrontal surface area
+right superiorparietal surface area
+right superiortemporal surface area
+right supramarginal surface area
+right frontalpole surface area
+right temporalpole surface area
+right transversetemporal surface area
+right insula surface area
+left caudalanteriorcingulate number of vertices
+left bankssts number of vertices
+left caudalmiddlefrontal number of vertices
+left cuneus number of vertices
+left entorhinal number of vertices
+left fusiform number of vertices
+left inferiorparietal number of vertices
+left inferiortemporal number of vertices
+left isthmuscingulate number of vertices
+left lateraloccipital number of vertices
+left lateralorbitofrontal number of vertices
+left lingual number of vertices
+left medialorbitofrontal number of vertices
+left middletemporal number of vertices
+left parahippocampal number of vertices
+left paracentral number of vertices
+left parsopercularis number of vertices
+left parsorbitalis number of vertices
+left parstriangularis number of vertices
+left pericalcarine number of vertices
+left postcentral number of vertices
+left posteriorcingulate number of vertices
+left precentral number of vertices
+left precuneus number of vertices
+left rostralanteriorcingulate number of vertices
+left rostralmiddlefrontal number of vertices
+left superiorfrontal number of vertices
+left superiorparietal number of vertices
+left superiortemporal number of vertices
+left supramarginal number of vertices
+left frontalpole number of vertices
+left temporalpole number of vertices
+left transversetemporal number of vertices
+left insula number of vertices
+right bankssts number of vertices
+right caudalanteriorcingulate number of vertices
+right caudalmiddlefrontal number of vertices
+right cuneus number of vertices
+right entorhinal number of vertices
+right fusiform number of vertices
+right inferiorparietal number of vertices
+right inferiortemporal number of vertices
+right isthmuscingulate number of vertices
+right lateraloccipital number of vertices
+right lateralorbitofrontal number of vertices
+right lingual number of vertices
+right medialorbitofrontal number of vertices
+right middletemporal number of vertices
+right parahippocampal number of vertices
+right paracentral number of vertices
+right parsopercularis number of vertices
+right parsorbitalis number of vertices
+right parstriangularis number of vertices
+right pericalcarine number of vertices
+right postcentral number of vertices
+right posteriorcingulate number of vertices
+right precentral number of vertices
+right precuneus number of vertices
+right rostralanteriorcingulate number of vertices
+right rostralmiddlefrontal number of vertices
+right superiorfrontal number of vertices
+right superiorparietal number of vertices
+right superiortemporal number of vertices
+right supramarginal number of vertices
+right frontalpole number of vertices
+right temporalpole number of vertices
+right transversetemporal number of vertices
+right insula number of vertices
+left caudalanteriorcingulate gray matter volume
+left bankssts gray matter volume
+left caudalmiddlefrontal gray matter volume
+left cuneus gray matter volume
+left entorhinal gray matter volume
+left fusiform gray matter volume
+left inferiorparietal gray matter volume
+left inferiortemporal gray matter volume
+left isthmuscingulate gray matter volume
+left lateraloccipital gray matter volume
+left lateralorbitofrontal gray matter volume
+left lingual gray matter volume
+left medialorbitofrontal gray matter volume
+left middletemporal gray matter volume
+left parahippocampal gray matter volume
+left paracentral gray matter volume
+left parsopercularis gray matter volume
+left parsorbitalis gray matter volume
+left parstriangularis gray matter volume
+left pericalcarine gray matter volume
+left postcentral gray matter volume
+left posteriorcingulate gray matter volume
+left precentral gray matter volume
+left precuneus gray matter volume
+left rostralanteriorcingulate gray matter volume
+left rostralmiddlefrontal gray matter volume
+left superiorfrontal gray matter volume
+left superiorparietal gray matter volume
+left superiortemporal gray matter volume
+left supramarginal gray matter volume
+left frontalpole gray matter volume
+left temporalpole gray matter volume
+left transversetemporal gray matter volume
+left insula gray matter volume
+right bankssts gray matter volume
+right caudalanteriorcingulate gray matter volume
+right caudalmiddlefrontal gray matter volume
+right cuneus gray matter volume
+right entorhinal gray matter volume
+right fusiform gray matter volume
+right inferiorparietal gray matter volume
+right inferiortemporal gray matter volume
+right isthmuscingulate gray matter volume
+right lateraloccipital gray matter volume
+right lateralorbitofrontal gray matter volume
+right lingual gray matter volume
+right medialorbitofrontal gray matter volume
+right middletemporal gray matter volume
+right parahippocampal gray matter volume
+right paracentral gray matter volume
+right parsopercularis gray matter volume
+right parsorbitalis gray matter volume
+right parstriangularis gray matter volume
+right pericalcarine gray matter volume
+right postcentral gray matter volume
+right posteriorcingulate gray matter volume
+right precentral gray matter volume
+right precuneus gray matter volume
+right rostralanteriorcingulate gray matter volume
+right rostralmiddlefrontal gray matter volume
+right superiorfrontal gray matter volume
+right superiorparietal gray matter volume
+right superiortemporal gray matter volume
+right supramarginal gray matter volume
+right frontalpole gray matter volume
+right temporalpole gray matter volume
+right transversetemporal gray matter volume
+right insula gray matter volume
+left bankssts thickness standard deviation
+left caudalanteriorcingulate thickness standard deviation
+left caudalmiddlefrontal thickness standard deviation
+left cuneus thickness standard deviation
+left entorhinal thickness standard deviation
+left fusiform thickness standard deviation
+left inferiorparietal thickness standard deviation
+left inferiortemporal thickness standard deviation
+left isthmuscingulate thickness standard deviation
+left lateraloccipital thickness standard deviation
+left lateralorbitofrontal thickness standard deviation
+left lingual thickness standard deviation
+left medialorbitofrontal thickness standard deviation
+left middletemporal thickness standard deviation
+left parahippocampal thickness standard deviation
+left paracentral thickness standard deviation
+left parsopercularis thickness standard deviation
+left parsorbitalis thickness standard deviation
+left parstriangularis thickness standard deviation
+left pericalcarine thickness standard deviation
+left postcentral thickness standard deviation
+left posteriorcingulate thickness standard deviation
+left precentral thickness standard deviation
+left precuneus thickness standard deviation
+left rostralanteriorcingulate thickness standard deviation
+left rostralmiddlefrontal thickness standard deviation
+left superiorfrontal thickness standard deviation
+left superiorparietal thickness standard deviation
+left superiortemporal thickness standard deviation
+left supramarginal thickness standard deviation
+left frontalpole thickness standard deviation
+left temporalpole thickness standard deviation
+left transversetemporal thickness standard deviation
+left insula thickness standard deviation
+right bankssts thickness standard deviation
+right caudalanteriorcingulate thickness standard deviation
+right caudalmiddlefrontal thickness standard deviation
+right cuneus thickness standard deviation
+right entorhinal thickness standard deviation
+right fusiform thickness standard deviation
+right inferiorparietal thickness standard deviation
+right inferiortemporal thickness standard deviation
+right isthmuscingulate thickness standard deviation
+right lateraloccipital thickness standard deviation
+right lateralorbitofrontal thickness standard deviation
+right lingual thickness standard deviation
+right medialorbitofrontal thickness standard deviation
+right middletemporal thickness standard deviation
+right parahippocampal thickness standard deviation
+right paracentral thickness standard deviation
+right parsopercularis thickness standard deviation
+right parsorbitalis thickness standard deviation
+right parstriangularis thickness standard deviation
+right pericalcarine thickness standard deviation
+right postcentral thickness standard deviation
+right posteriorcingulate thickness standard deviation
+right precentral thickness standard deviation
+right precuneus thickness standard deviation
+right rostralanteriorcingulate thickness standard deviation
+right rostralmiddlefrontal thickness standard deviation
+right superiorfrontal thickness standard deviation
+right superiorparietal thickness standard deviation
+right superiortemporal thickness standard deviation
+right supramarginal thickness standard deviation
+right frontalpole thickness standard deviation
+right temporalpole thickness standard deviation
+right transversetemporal thickness standard deviation
+right insula thickness standard deviation
+left bankssts integrated rectified mean curvature
+left caudalanteriorcingulate integrated rectified mean curvature
+left caudalmiddlefrontal integrated rectified mean curvature
+left cuneus integrated rectified mean curvature
+left entorhinal integrated rectified mean curvature
+left fusiform integrated rectified mean curvature
+left inferiorparietal integrated rectified mean curvature
+left inferiortemporal integrated rectified mean curvature
+left isthmuscingulate integrated rectified mean curvature
+left lateraloccipital integrated rectified mean curvature
+left lateralorbitofrontal integrated rectified mean curvature
+left lingual integrated rectified mean curvature
+left medialorbitofrontal integrated rectified mean curvature
+left middletemporal integrated rectified mean curvature
+left parahippocampal integrated rectified mean curvature
+left paracentral integrated rectified mean curvature
+left parsopercularis integrated rectified mean curvature
+left parsorbitalis integrated rectified mean curvature
+left parstriangularis integrated rectified mean curvature
+left pericalcarine integrated rectified mean curvature
+left postcentral integrated rectified mean curvature
+left posteriorcingulate integrated rectified mean curvature
+left precentral integrated rectified mean curvature
+left precuneus integrated rectified mean curvature
+left rostralanteriorcingulate integrated rectified mean curvature
+left rostralmiddlefrontal integrated rectified mean curvature
+left superiorfrontal integrated rectified mean curvature
+left superiorparietal integrated rectified mean curvature
+left superiortemporal integrated rectified mean curvature
+left supramarginal integrated rectified mean curvature
+left frontalpole integrated rectified mean curvature
+left temporalpole integrated rectified mean curvature
+left transversetemporal integrated rectified mean curvature
+left insula integrated rectified mean curvature
+right bankssts integrated rectified mean curvature
+right caudalanteriorcingulate integrated rectified mean curvature
+right caudalmiddlefrontal integrated rectified mean curvature
+right cuneus integrated rectified mean curvature
+right entorhinal integrated rectified mean curvature
+right fusiform integrated rectified mean curvature
+right inferiorparietal integrated rectified mean curvature
+right inferiortemporal integrated rectified mean curvature
+right isthmuscingulate integrated rectified mean curvature
+right lateraloccipital integrated rectified mean curvature
+right lateralorbitofrontal integrated rectified mean curvature
+right lingual integrated rectified mean curvature
+right medialorbitofrontal integrated rectified mean curvature
+right middletemporal integrated rectified mean curvature
+right parahippocampal integrated rectified mean curvature
+right paracentral integrated rectified mean curvature
+right parsopercularis integrated rectified mean curvature
+right parsorbitalis integrated rectified mean curvature
+right parstriangularis integrated rectified mean curvature
+right pericalcarine integrated rectified mean curvature
+right postcentral integrated rectified mean curvature
+right posteriorcingulate integrated rectified mean curvature
+right precentral integrated rectified mean curvature
+right precuneus integrated rectified mean curvature
+right rostralanteriorcingulate integrated rectified mean curvature
+right rostralmiddlefrontal integrated rectified mean curvature
+right superiorfrontal integrated rectified mean curvature
+right superiorparietal integrated rectified mean curvature
+right superiortemporal integrated rectified mean curvature
+right supramarginal integrated rectified mean curvature
+right frontalpole integrated rectified mean curvature
+right temporalpole integrated rectified mean curvature
+right transversetemporal integrated rectified mean curvature
+right insula integrated rectified mean curvature
+cosine similarity of weighted degree
+10.0 percent edges count global efficiency
+10.0 percent edges count local efficiency
+10.0 percent edges count average clustering
+15.0 percent edges count global efficiency
+15.0 percent edges count local efficiency
+15.0 percent edges count average clustering
+cosine similarity of weighted degree
+10.0 percent edges count global efficiency
+10.0 percent edges count local efficiency
+10.0 percent edges count average clustering
+15.0 percent edges count global efficiency
+15.0 percent edges count local efficiency
+15.0 percent edges count average clustering

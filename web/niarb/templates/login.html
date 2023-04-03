@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Niarb - Login</title>
+    <link rel="stylesheet" href="../static/bootstrap5/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: rgba(46, 38, 38, 0.9)
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form class="form-login" action="/login/" method="post">
+                            <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" name="username" placeholder="Username" required>
+                                <label for="floatingInput">Username</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                    required>
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Login</button>
+                        </form>
+                        <p class="text-muted text-center mb-0">No account? <a href="../signup/">Register</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/bootstrap5/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

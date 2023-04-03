@@ -1,0 +1,10 @@
+indicator_name,header_name,is_enabled,units,description
+NumVert,NumVert,enable,None,number of vertices
+SurfArea,Area,enable,mm^2,surface area
+GrayVol,GrayVol,enable,mm^3,gray matter volume
+ThickAvg,Thck,enable,mm,average thickness
+ThickStd,ThckStd,enable,mm,thickness standard deviation
+MeanCurv,MeanCurv,enable,mm^-1,integrated rectified mean curvature
+GausCurv,GausCurv,disable,mm^-2,integrated rectified gaussian curvature
+FoldInd,FoldInd,disable,None,folding index
+CurvInd,CurvInd,disable,None,intrinsic curvature index

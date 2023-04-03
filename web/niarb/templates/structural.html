@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Niarb - Structural</title>
+    <link rel="stylesheet" href="../static/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap-fileinput/css/fileinput.min.css">
+
+    <style>
+        .navbar .active {
+            background-color: #eae5e9 !important;
+        }
+
+        .navbar-nav a {
+            margin-right: 2rem;
+        }
+
+        .equal-height {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .equal-height>* {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../static/images/logo.jpg" width="30" height="30">
+                Niarb
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-5">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Structural</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/functional/">Functional</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/diffusion/">Diffusion</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+
+                </ul>
+            </div>
+            {% if request.user.is_authenticated %}
+            <a href="/logout/">
+                <button class="btn btn-outline-success" type="submit">logout</button>
+            </a>
+            {% else %}
+            <a href="/login/">
+                <button class="btn btn-outline-success" type="submit">login</button>
+            </a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+
+        <!-- User Records Card -->
+        <div class="card mt-3 mb-3">
+
+            <div class="card-header d-flex">
+                <h3 class="card-title flex-grow-1">Records</h3>
+                {% if request.user.is_authenticated %}
+                <button class="btn btn-sm btn-primary" onclick="add_user_record()">Create New Record</button>
+                {% endif %}
+            </div>
+
+            <div class="card-body">
+                {% if request.user.is_authenticated %}
+                <table class="table table-light table-striped table-bordered text-center">
+
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Category</td>
+                            <td>Status</td>
+                            <td>Create Time</td>
+                            <td>Update TIme</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for i in user_records %}
+                        <tr>
+                            <td>{{i.id}}</td>
+                            <td>{{i.category}}</td>
+                            <td>{{i.status}}</td>
+                            <td>{{i.create_time}}</td>
+                            <td>{{i.update_time}}</td>
+                            {% if i.status == 'unprocessed' %}
+                            <td>
+                                <button class="btn btn-sm btn-outline-success"
+                                    onclick="process_user_record('{{i.id}}')">Process</button>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    onclick="delete_user_record('{{i.id}}')">Delete</button>
+                            </td>
+                            {% elif i.status == 'processed' %}
+                            <td>
+                                <button class="btn btn-sm btn-outline-success"
+                                    onclick="get_user_report('{{i.id}}')">Report</button>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    onclick="delete_user_record('{{i.id}}')">Delete</button>
+                            </td>
+                            {% elif i.status == 'failed' %}
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    onclick="delete_user_record('{{i.id}}')">Delete</button>
+                            </td>
+                            {% elif i.status == 'processing' %}
+                            <td>...</td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+                {% else %}
+                <a href="/login/">Please login first</a>
+                {% endif %}
+            </div>
+
+            <div class="card-footer"></div>
+        </div>
+
+        <!-- Benchmark Card -->
+        <div class="card">
+
+            <div class="card-header">
+                <h3 class="card-title">Benchmark</h3>
+            </div>
+
+            <div class="card-body" style="overflow-y:auto; height:800px;">
+                <table class="table table-light table-striped table-hover">
+
+                    <thead>
+                        <tr>
+                            <td>Indicator Name</td>
+                            <td>Mean</td>
+                            <td>Stddev</td>
+                            <td>Min</td>
+                            <td>Max</td>
+                            <td>Units</td>
+                            <td>Distribution</td>
+                            <td>Low Bound</td>
+                            <td>High Bound</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for i in benchmark %}
+                        <tr>
+                            <td>{{i.indicator_name}}</td>
+                            <td>{{i.mean}}</td>
+                            <td>{{i.stddev}}</td>
+                            <td>{{i.min}}</td>
+                            <td>{{i.max}}</td>
+                            <td>{{i.units}}</td>
+                            <td>{{i.distribution}}</td>
+                            <td>{{i.low_bound}}</td>
+                            <td>{{i.high_bound}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+
+    <!-- Uploading Files Modal -->
+    <div class="modal fade" id="upload_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Upload Structural Files</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="p-3 mb-3 border border-warning bg-warning bg-opacity-10 rounded text-center">
+                        Note: Only a file named smri.nii.gz is allowed!
+                    </div>
+                    <form enctype="multipart/form-data">
+                        <input id="upload_file" name="upload_file" type="file" class="file" multiple>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete User Record Modal -->
+    <div class="modal fade" id="delete_record_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h5 class="modal-title">Are you sure to delete this record?</h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="delete_user_record_btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Show Report Modal -->
+    <div class="modal fade" id="report_modal" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">User Report</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Abnormal Indicators</h5>
+                    <table id="abnormal_tbody" class="table table-light table-striped">
+                        <thead>
+                            <tr>
+                                <td>Indicator Name</td>
+                                <td>Value</td>
+                                <td>Units</td>
+                                <td>Conclusion</td>
+                            </tr>
+                        </thead>
+                        <tbody id="abnormal_tbody"></tbody>
+                    </table>
+                    <hr>
+                    <h5>All Indicators</h5>
+                    <table id="report_table" class="table table-light table-striped">
+                        <thead>
+                            <tr>
+                                <td>Indicator Name</td>
+                                <td>Value</td>
+                                <td>Units</td>
+                                <td>Conclusion</td>
+                            </tr>
+                        </thead>
+                        <tbody id="report_tbody"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/jquery/jquery-3.6.4.min.js"></script>
+    <script src="../static/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/bootstrap-fileinput/js/fileinput.js"></script>
+    <script src="../static/bootstrap-fileinput/js/locales/zh.js"></script>
+
+    <!-- bootstrap-fileinput configuration -->
+    <script>
+
+        var subj_id = '';
+
+        $("#upload_file").fileinput({
+
+            uploadUrl: '/file_accept/',
+            allowedFileExtensions: ['nii.gz'],
+            maxFileSize: 1000000,
+            maxFileCount: 1,
+            layoutTemplates: {
+                actionDelete: '',
+                actionUpload: '',
+                actionZoom: '',
+            },
+
+            uploadExtraData: function (previewId, index) {
+                var data = {
+                    'subj_id': subj_id,
+                    'category': 'smri',
+                };
+                return data;
+            },
+        });
+
+        $("#upload_file").on('filebatchpreupload', function () {
+            var username = "{{request.user.username}}";
+            subj_id = username + "_" + Date.now().toString();
+        });
+
+        $("#upload_file").on("fileuploaderror", function (event, data, msg) {
+            alert('Note: Only one file named smri.nii.gz is allowed!');
+            setTimeout(function () {
+                $('#upload_file').fileinput('clear');
+            }, 100);
+        });
+
+        $('#upload_file').on('filebatchselected', function (event, files) {
+            var file_count = Object.keys(files).length;
+            if (file_count == 0) {
+                return;
+            }
+            var file_names = [];
+            for (var i = 0; i < file_count; i++) {
+                file_names.push(files[Object.keys(files)[i]].name);
+            }
+            if (file_count != 1 || file_names[0] != 'smri.nii.gz') {
+                alert('Note: Only one file named smri.nii.gz is allowed!');
+                setTimeout(function () {
+                    $('#upload_file').fileinput('clear');
+                }, 100);
+            }
+        });
+
+        $("#upload_file").on('filebatchuploadcomplete', function (event, files, extra) {
+            $('#upload_modal').modal('hide');
+            setTimeout(function () {
+                $('#upload_file').fileinput('clear');
+            }, 1000);
+            window.location.reload();
+        });
+
+    </script>
+
+    <!-- create user record -->
+    <script>
+        function add_user_record() {
+            $('#upload_modal').modal('show');
+        }
+    </script>
+
+    <!-- process user record -->
+    <script>
+        function process_user_record(id) {
+            $.ajax({
+                url: '/process_user_record/',
+                type: 'POST',
+                data: {
+                    'id': id,
+                },
+                success: function () {
+                    window.location.reload();
+                },
+            });
+        }
+    </script>
+
+    <!-- delete user record -->
+    <script>
+        function delete_user_record(id) {
+            $('#delete_record_modal').modal('show').on('click', '#delete_user_record_btn', function () {
+                $.ajax({
+                    url: '/delete_user_record/',
+                    type: 'POST',
+                    data: {
+                        'id': id,
+                    },
+                    success: function (data) {
+                        window.location.reload();
+                    },
+                });
+            });
+        }
+    </script>
+
+    <!-- get user report -->
+    <script>
+        function get_user_report(id) {
+            $.ajax({
+                url: '/get_user_report/',
+                type: 'POST',
+                data: {
+                    'id': id,
+                },
+                success: function (data) {
+                    data = JSON.parse(data);
+
+                    report = data.report;
+                    var report_tbody = document.getElementById('report_tbody');
+                    report_tbody = '<tbody id="report_tbody">';
+                    for (var i = 0; i < report.length; i++) {
+                        report_tbody += '<tr>';
+                        report_tbody += '<td>' + report[i].indicator_name + '</td>';
+                        report_tbody += '<td>' + report[i].value + '</td>';
+                        report_tbody += '<td>' + report[i].units + '</td>';
+                        report_tbody += '<td>' + report[i].conclusion + '</td>';
+                        report_tbody += '</tr>';
+                    }
+                    report_tbody += '</tbody>';
+                    document.getElementById('report_tbody').innerHTML = report_tbody;
+
+                    abnormal = data.abnormal;
+                    var abnormal_tbody = document.getElementById('abnormal_tbody');
+                    abnormal_tbody = '<tbody id="abnormal_tbody">';
+                    for (var i = 0; i < abnormal.length; i++) {
+                        abnormal_tbody += '<tr>';
+                        abnormal_tbody += '<td>' + abnormal[i].indicator_name + '</td>';
+                        abnormal_tbody += '<td>' + abnormal[i].value + '</td>';
+                        abnormal_tbody += '<td>' + abnormal[i].units + '</td>';
+                        abnormal_tbody += '<td>' + abnormal[i].conclusion + '</td>';
+                        abnormal_tbody += '</tr>';
+                    }
+                    abnormal_tbody += '</tbody>';
+                    document.getElementById('abnormal_tbody').innerHTML = abnormal_tbody;
+
+                    $('#report_modal').modal('show');
+                },
+            });
+        }
+    </script>
+
+</body>
+
+</html>
