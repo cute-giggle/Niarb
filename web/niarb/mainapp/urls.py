@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('index/', views.index, name='index'),
     path('structural/', views.structural, name='structural'),
     path('functional/', views.functional, name='functional'),
@@ -19,4 +20,8 @@ urlpatterns = [
     path('get_user_report/', views.get_user_report, name='get_user_report'),
 
     path('askme/', views.askme, name='askme'),
+
+    path('surface/', views.surface, name='surface'),
+    path('get_fsaverage_mesh/', views.get_fsaverage_mesh, name='get_fsaverage_mesh'),
+    path('get_fsaverage_annot/', views.get_fsaverage_annot, name='get_fsaverage_annot'),
 ]

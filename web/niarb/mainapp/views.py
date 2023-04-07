@@ -14,6 +14,9 @@ import glob
 
 from .models import UserNote
 
+from .data import indicator_guide
+from .data import FsaverageMesh, FsaverageAnnot
+
 
 WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../data/working')
 BENCHMARK_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../data/benchmark')
@@ -122,6 +125,10 @@ def diffusion(request):
                 UserNote.objects.filter(id=user_record['id']).update(status=user_record['status'])
 
     return render(request, 'diffusion.html', locals())
+
+
+def surface(request):
+    return render(request, 'surface.html')
 
 
 def login(request):
@@ -253,6 +260,11 @@ def get_user_report(request):
     abnormal = report[report['conclusion'] != 'normal']
     report = json.loads(report.reset_index().to_json(orient='records'))
     abnormal = json.loads(abnormal.reset_index().to_json(orient='records'))
+    for i in range(len(abnormal)):
+        indicator_name = abnormal[i]['indicator_name']
+        conclusion = abnormal[i]['conclusion']
+        category = user_record.category
+        abnormal[i]['guide'] = indicator_guide.get_indicator_guide(category, indicator_name, conclusion)
 
     img_dir = os.path.join(get_subj_dir(user_record.id, user_record.category), 'report_result')
     img_list = [os.path.basename(img) for img in glob.glob(os.path.join(img_dir, '*.png'))]
@@ -276,3 +288,19 @@ def askme(request):
             answer = 'Sorry, I cannot answer your question.'
         
     return HttpResponse(json.dumps({'answer': answer}))
+
+
+def get_fsaverage_mesh(request):
+    if request.method != 'GET':
+        return HttpResponse(json.dumps({'error': 'method not allowed'}))
+    mesh_name = request.GET.get('mesh_name') + '.mesh'
+    data = FsaverageMesh(mesh_name).get_data()
+    return HttpResponse(json.dumps(data))
+
+
+def get_fsaverage_annot(request):
+    if request.method != 'GET':
+        return HttpResponse(json.dumps({'error': 'method not allowed'}))
+    annot_name = request.GET.get('annot_name') + '.annot'
+    data = FsaverageAnnot(annot_name).get_data()
+    return HttpResponse(json.dumps(data))

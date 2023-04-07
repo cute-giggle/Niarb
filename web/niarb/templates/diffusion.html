@@ -58,7 +58,7 @@
                     </li>
 
                     <li>
-                        <a class="nav-link" href="/about/">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
 
                 </ul>
@@ -240,17 +240,7 @@
                 </div>
                 <div class="modal-body text-center">
                     <h5>Abnormal Indicators</h5>
-                    <table id="abnormal_tbody" class="table table-light table-striped">
-                        <thead>
-                            <tr>
-                                <td>Indicator Name</td>
-                                <td>Value</td>
-                                <td>Units</td>
-                                <td>Conclusion</td>
-                            </tr>
-                        </thead>
-                        <tbody id="abnormal_tbody"></tbody>
-                    </table>
+                    <div id="abnormal_indicators"></div>
                     <hr>
                     <h5>All Indicators</h5>
                     <table id="report_table" class="table table-light table-striped">
@@ -425,18 +415,15 @@
                     document.getElementById('report_tbody').innerHTML = report_tbody;
 
                     abnormal = data.abnormal;
-                    var abnormal_tbody = document.getElementById('abnormal_tbody');
-                    abnormal_tbody = '<tbody id="abnormal_tbody">';
+                    var abnormal_indicators = '<div id="abnormal_indicators">'
                     for (var i = 0; i < abnormal.length; i++) {
-                        abnormal_tbody += '<tr>';
-                        abnormal_tbody += '<td>' + abnormal[i].indicator_name + '</td>';
-                        abnormal_tbody += '<td>' + abnormal[i].value + '</td>';
-                        abnormal_tbody += '<td>' + abnormal[i].units + '</td>';
-                        abnormal_tbody += '<td>' + abnormal[i].conclusion + '</td>';
-                        abnormal_tbody += '</tr>';
+                        abnormal_indicators += '<div class="border border-info bg-info bg-opacity-25 rounded p-3 mb-3">';
+                        abnormal_indicators += '<h5 class="text-danger">' + abnormal[i].indicator_name + ' ' + abnormal[i].conclusion + '</h5>';
+                        abnormal_indicators += abnormal[i].guide;
+                        abnormal_indicators += '</div>';
                     }
-                    abnormal_tbody += '</tbody>';
-                    document.getElementById('abnormal_tbody').innerHTML = abnormal_tbody;
+                    abnormal_indicators += '</div>';
+                    document.getElementById('abnormal_indicators').innerHTML = abnormal_indicators;
 
                     var img_list = document.getElementById('img_list');
                     img_list.innerHTML = '';
